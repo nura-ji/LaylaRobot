@@ -76,7 +76,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = """
 Hello, I'M Nura
 `ɪ'ᴍ ʜᴇʀᴇ ᴛᴏ ʜᴇʟᴘ ʏᴏᴜ ᴍᴀɴᴀɢᴇ ʏᴏᴜʀ ɢʀᴏᴜᴘꜱ! ʜɪᴛ` /help
-Maintained by @KC_JP 🖤
+Maintained by @kc_jp 🖤
 """
 
 buttons = [
@@ -103,11 +103,11 @@ buttons = [
 
 
 HELP_STRINGS = """
-`Hi.. I'M` Nura
+`Hi.. I'm` Nura
 `ᴄʟɪᴄᴋ ᴏɴ ᴛʜᴇ ʙᴜᴛᴛᴏɴꜱ ʙᴇʟᴏᴡ ᴛᴏ ɢᴇᴛ ᴅᴏᴄᴜᴍᴇɴᴛᴀᴛɪᴏɴ ᴀʙᴏᴜᴛ ꜱᴘᴇᴄɪꜰɪᴄ ᴍᴏᴅᴜʟᴇꜱ..`
-Powered by :- [Awesome Bots](t.me/Laylalist)"""
+Owned by :- [Nura Clan](t.me/kazui_ji)"""
 
-layla_IMG = "https://telegra.ph/file/fc765298cc0faf2288523.jpg"
+nura_IMG = "https://telegra.ph/file/fc765298cc0faf2288523.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
  You can support the project [Hero](t.me/HEROGAMERS1) \
