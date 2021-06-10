@@ -14,7 +14,7 @@ from pyrogram import filters
 from LaylaRobot import BOT_ID
 from LaylaRobot.helper_extra.aichat import add_chat, get_session, remove_chat
 from LaylaRobot.pyrogramee.pluginshelper import admins_only, edit_or_reply
-from LaylaRobot import pbot as nura
+from LaylaRobot import pbot as layla
 
 translator = google_translator()
 import requests
@@ -39,15 +39,15 @@ async def fetch(url):
         return
 
 
-Nura_chats = []
+layla_chats = []
 en_chats = []
 
-@Nura.on_message(
+@layla.on_message(
     filters.command("chatbot") & ~filters.edited & ~filters.bot & ~filters.private
 )
 @admins_only
 async def hmm(_, message):
-    global Nura_chats
+    global layla_chats
     if len(message.command) != 2:
         await message.reply_text(
             "I only recognize `/chatbot on` and /chatbot `off only`"
@@ -88,7 +88,7 @@ async def hmm(_, message):
         )
 
 
-@Nura.on_message(
+@layla.on_message(
     filters.text
     & filters.reply
     & ~filters.bot
@@ -114,8 +114,8 @@ async def hmm(client, message):
         message.continue_propagation()
     if chat_id in en_chats:
         test = msg
-        test = test.replace("Nura", "Aco")
-        test = test.replace("Nura", "Aco")
+        test = test.replace("layla", "Aco")
+        test = test.replace("layla", "Aco")
         URL = "https://api.affiliateplus.xyz/api/chatbot?message=hi&botname=@LaylaRobot&ownername=@HEROGAMERS1"
 
         try:
@@ -130,7 +130,7 @@ async def hmm(client, message):
 
         pro = result["message"]
         try:
-            await Nura.send_chat_action(message.chat.id, "typing")
+            await layla.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
@@ -177,8 +177,8 @@ async def hmm(client, message):
         # test = emoji.demojize(test.strip())
 
         # Kang with the credits bitches @InukaASiTH
-        test = test.replace("Nura", "Aco")
-        test = test.replace("Nura", "Aco")
+        test = test.replace("layla", "Aco")
+        test = test.replace("layla", "Aco")
         URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@LaylaRobot&ownername=@HEROGAMERS1"
         try:
             r = requests.request("GET", url=URL)
@@ -196,13 +196,13 @@ async def hmm(client, message):
             except:
                 return
         try:
-            await Nura.send_chat_action(message.chat.id, "typing")
+            await layla.send_chat_action(message.chat.id, "typing")
             await message.reply_text(pro)
         except CFError:
             return
 
 
-@Nura.on_message(
+@layla.on_message(
     filters.text & filters.private & ~filters.edited & filters.reply & ~filters.bot
 )
 async def inuka(client, message):
@@ -251,8 +251,8 @@ async def inuka(client, message):
     # test = emoji.demojize(test.strip())
 
     # Kang with the credits bitches @InukaASiTH
-    test = test.replace("Nura", "Aco")
-    test = test.replace("Nura", "Aco")
+    test = test.replace("layla", "Aco")
+    test = test.replace("layla", "Aco")
     URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@LaylaRobot&ownername=@HEROGAMERS1"
     try:
         r = requests.request("GET", url=URL)
@@ -268,14 +268,14 @@ async def inuka(client, message):
     if not "en" in lan and not lan == "":
         pro = translator.translate(pro, lang_tgt=lan[0])
     try:
-        await Nura.send_chat_action(message.chat.id, "typing")
+        await layla.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
 
 
-@Nura.on_message(
-    filters.regex("Nura|Nura|Nura|Nura|Nura")
+@layla.on_message(
+    filters.regex("layla|layla|Layla|Layla|Layla")
     & ~filters.bot
     & ~filters.via_bot
     & ~filters.forwarded
@@ -329,8 +329,8 @@ async def inuka(client, message):
     # test = emoji.demojize(test.strip())
 
     # Kang with the credits bitches @InukaASiTH
-    test = test.replace("Nura", "Aco")
-    test = test.replace("Nura", "Aco")
+    test = test.replace("layla", "Aco")
+    test = test.replace("layla", "Aco")
     URL = f"https://api.affiliateplus.xyz/api/chatbot?message={test}&botname=@LaylaRobot&ownername=@A_viyu"
     try:
         r = requests.request("GET", url=URL)
@@ -348,7 +348,7 @@ async def inuka(client, message):
         except Exception:
             return
     try:
-        await Nura.send_chat_action(message.chat.id, "typing")
+        await layla.send_chat_action(message.chat.id, "typing")
         await message.reply_text(pro)
     except CFError:
         return
@@ -356,7 +356,7 @@ async def inuka(client, message):
 
 __help__ = """
 <b> Chatbot </b>
-Nura AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
+layla AI 3.0 IS THE ONLY AI SYSTEM WHICH CAN DETECT & REPLY UPTO 200 LANGUAGES
  - /chatbot [ON/OFF]: Enables and disables AI Chat mode (EXCLUSIVE)
  - /chatbot EN : Enables English only chatbot
  
